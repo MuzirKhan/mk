@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .center{
+        text-align: center;
+        font-size:30px;
+    }
+    .heading{
+        height:100px;
+        background-color: aquamarine;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .form{
+        margin-top: 10px;
+        height: 300px;
+        background-color: aquamarine;
+        /* display: inline-block; */
+    }
+    body{
+        background-color: black;
+    }
+    .input{
+        margin-top: 10px;
+        margin-left: 10px;
+        height:30px;
+        width: 200px;
+        font-size: 20px; 
+    }
+    .submit{
+        height:30px;
+        width:100px;
+    }
+</style>
+<body>
+    <div class="heading">
+    <p class="center">Contact Us</p>
+</div>
+<div class="form">  
+    <form action="/" method="post">
+        {% csrf_token %}
+    
+        <input class="input" type="text" name="Name" id="name" autocomplete="additional-name" placeholder="Enter Name">
+        <input class="input" type="text" name="Email" id="Email" placeholder="Enter Email">
+        <input class="input" type="text" name="Phone" id="Phone" placeholder="Enter Phone">
+        <button class="submit" type="submit">Submit</button>
+    </form>
+    <a href="about"></a>
+</div>
+</body>
+</html>
